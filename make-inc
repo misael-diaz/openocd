@@ -1,0 +1,34 @@
+#
+# openocd-fork				November 21, 2026
+#
+# source: make-inc
+# author: @misael-diaz
+#
+# Synopsis:
+# Defines the include file for building the program with GNU make.
+#
+# Copyright (c) 2026 Misael Díaz-Maldonado
+#
+# This file is released under the GNU General Public License version 2 only
+# as published by the Free Software Foundation.
+#
+
+CC = arm-none-eabi-gcc
+CC = gcc
+INCLUDES = \
+	-I$(PWD)/jimtcl/\
+	-I$(PWD)/src/flash/\
+	-I$(PWD)/src/helper/\
+	-I$(PWD)/src/
+DEFINES = \
+	  -DHAVE_SYS_TIME_H\
+	  -DHAVE_GETTIMEOFDAY\
+	  -DHAVE_STRNDUP\
+	  -DHAVE_STRNLEN\
+	  -DHAVE_NO_AUTOCONF\
+	  -DHAVE_USLEEP\
+	  -DUNUSEDLASTDEFINE
+CCOPT=\
+      $(DEFINES)\
+      $(INCLUDES)\
+      -O0
