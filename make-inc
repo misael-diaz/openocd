@@ -14,7 +14,6 @@
 #
 
 CC = arm-none-eabi-gcc
-CC = gcc
 INCLUDES = \
 	-I$(PWD)/jimtcl/\
 	-I$(PWD)/src/flash/\
