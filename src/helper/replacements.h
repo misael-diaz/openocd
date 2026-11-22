@@ -17,6 +17,13 @@
 #include <stdint.h>
 #include <helper/system.h>
 
+#ifndef _WIN32
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#endif
+
 /* MIN,MAX macros */
 #ifndef MIN
 #define MIN(a, b) (((a) < (b)) ? (a) : (b))
